@@ -1,17 +1,22 @@
-@mixin breakpoint($point) {
+@mixin responsive($point) {
   @if $point == large {
-    @media only screen and (min-width: 1366px) {
+    @media screen and (min-width: 1366px) {
       @content;
     }
-  } @else if $point == desktop {
-    @media only screen and (min-width: 1024px) {
+  }
+
+  @if $point == desktop {
+    @media screen and (min-width: 1024px) {
       @content;
     }
-  } @else if $point == tablet {
-    @media only screen and (min-width: 600px) {
+  }
+
+  @if $point == tablet {
+    @media screen and (min-width: 600px) {
       @content;
     }
-  } @else if $pint == mobile {
+  }
+  @if $point == mobile {
     @media screen and (min-width: 400px) {
       @content;
     }
