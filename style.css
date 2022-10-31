@@ -242,6 +242,11 @@ header .container nav ul li:last-of-type:hover {
     flex-wrap: wrap;
   }
 }
+@media screen and (max-width: 2000px) {
+  .reason-section .container .items {
+    flex: 0 0 23%;
+  }
+}
 @media screen and (max-width: 768px) {
   .reason-section .container .items {
     flex: 0 0 45%;
@@ -277,7 +282,7 @@ header .container nav ul li:last-of-type:hover {
 .questions .container .items {
   margin-bottom: 2rem;
 }
-@media screen and (max-width: 1334px) {
+@media screen and (max-width: 2000px) {
   .questions .container .items {
     flex: 0 0 47%;
     text-align: left;
