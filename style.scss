@@ -67,9 +67,9 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  @include responsive(tablet) {
-    height: 40vh;
-  }
+  // @include responsive(tablet) {
+  //   height: 40vh;
+  // }
   @include responsive(mobile) {
     height: 60vh;
   }
@@ -130,13 +130,10 @@ header {
  about section
  ***********/
 .about-section {
-  height: 30vh;
+  height: 40vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  @include responsive(tablet) {
-    height: 20vh;
-  }
 
   .about {
     flex: 0 0 60%;

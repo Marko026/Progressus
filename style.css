@@ -121,11 +121,6 @@ header .container nav ul li:last-of-type:hover {
   justify-content: center;
   align-items: center;
 }
-@media screen and (max-width: 768px) {
-  .hero-section {
-    height: 40vh;
-  }
-}
 @media screen and (max-width: 576px) {
   .hero-section {
     height: 60vh;
@@ -194,15 +189,10 @@ header .container nav ul li:last-of-type:hover {
  about section
  ***********/
 .about-section {
-  height: 30vh;
+  height: 40vh;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-@media screen and (max-width: 768px) {
-  .about-section {
-    height: 20vh;
-  }
 }
 .about-section .about {
   flex: 0 0 60%;
