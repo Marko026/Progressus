@@ -1,0 +1,37 @@
+.reason-section {
+  background-color: $bcGray;
+  padding: 8rem 0;
+  h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    color: $text-color;
+    opacity: 0.7;
+  }
+  .container {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    @include responsive(tablet) {
+      flex-wrap: wrap;
+    }
+    .items {
+      @include responsive(desktop) {
+        flex: 0 0 23%;
+      }
+      @include responsive(tablet) {
+        flex: 0 0 45%;
+      }
+      @include responsive(mobile) {
+        flex: 0 0 100%;
+      }
+      i {
+        font-size: 4rem;
+        margin: 4rem 0;
+      }
+      p {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}

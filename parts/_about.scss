@@ -1,0 +1,24 @@
+.about-section {
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    .about {
+      flex: 0 0 60%;
+      text-align: center;
+      @include responsive(mobile) {
+        flex: 0 0 80%;
+      }
+      @include responsive(small) {
+        flex: 0 0 90%;
+      }
+      h2 {
+        margin-bottom: 1rem;
+        font-weight: 500;
+        @include responsive(small) {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }

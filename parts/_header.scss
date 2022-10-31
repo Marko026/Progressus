@@ -1,0 +1,53 @@
+header {
+  background-color: $text-color;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    @include responsive(tablet) {
+      flex-direction: column;
+    }
+    img {
+      max-width: 80%;
+      @include responsive(tablet) {
+        flex: 0 0 100%;
+        margin-bottom: 1rem;
+      }
+    }
+
+    nav {
+      ul {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+
+        li {
+          list-style: none;
+          a {
+            color: $white;
+            transition: $transition;
+            @include responsive(mobile) {
+              font-size: 1.1rem;
+            }
+            &:hover {
+              color: $primary;
+            }
+          }
+        }
+        li:last-of-type {
+          border: 2px solid $white;
+          padding: 0.6rem 1rem;
+          text-transform: uppercase;
+          transition: $transition;
+          @include responsive(mobile) {
+            padding: 0.3rem;
+          }
+          &:hover {
+            border-color: $primary;
+          }
+        }
+      }
+    }
+  }
+}
