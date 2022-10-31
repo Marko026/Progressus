@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
+html {
+  font-size: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: black;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+  opacity: 0.6;
+}
+
+h3 {
+  font-size: 2.7rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.6rem;
+  opacity: 0.7;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+
+/*# sourceMappingURL=style.css.map */
+/* Header*/
+header {
+  background-color: black;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+header .container img {
+  max-width: 80%;
+}
+header .container nav ul {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+header .container nav ul li {
+  list-style: none;
+}
+header .container nav ul li a {
+  color: white;
+  transition: 0.5s;
+}
+header .container nav ul li a:hover {
+  color: #ffa500;
+}
+header .container nav ul li:last-of-type {
+  border: 2px solid white;
+  padding: 0.6rem 1rem;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+header .container nav ul li:last-of-type:hover {
+  border-color: #ffa500;
+}
+
+/* hero section*/
+.hero-section {
+  height: 80vh;
+  background-image: url(images/bg_header.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero-section h1 {
+  color: white;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.hero-section .hero {
+  text-align: center;
+}
+.hero-section .hero p {
+  color: white;
+  padding: 2rem 0;
+}
+.hero-section .hero a {
+  display: inline-block;
+  border: 2px solid white;
+  border-radius: 3px;
+  padding: 1rem 7rem;
+  text-transform: uppercase;
+  color: white;
+  opacity: 0.7;
+  font-weight: 500;
+  transition: 0.5s;
+}
+.hero-section .hero a:hover {
+  background-color: #ffa500;
+  border-color: transparent transparent;
+}
+
+/***********
+ about section
+ ***********/
+.about-section {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-section .about {
+  flex-basis: 60%;
+  text-align: center;
+}
+.about-section .about h2 {
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+/***********
+ Reasons section
+ ***********/
+.reason-section {
+  background-color: rgb(204, 199, 199);
+  padding: 8rem 0;
+}
+.reason-section h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 400;
+  color: black;
+  opacity: 0.7;
+}
+.reason-section .container {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+.reason-section .container .items {
+  flex-basis: 24%;
+}
+.reason-section .container .items i {
+  font-size: 4rem;
+  margin: 4rem 0;
+}
+
+/* questions*/
+.questions {
+  padding: 8rem 0;
+}
+.questions h2 {
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 4rem;
+}
+.questions .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.questions .container .items {
+  flex: 0 0 48%;
+  margin-bottom: 2rem;
+}
+.questions .container .items h4 {
+  font-weight: 500;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+.questions .container .items p {
+  line-height: 2.5rem;
+}
+.questions .container .items-descrition {
+  flex: 0 0 100%;
+  padding: 3rem 3rem;
+  background-color: rgb(204, 199, 199);
+}
+.questions .container .items-descrition p {
+  opacity: 1;
+  margin-bottom: 2rem;
+}
+.questions .container .items-descrition .item-link {
+  text-align: right;
+}
+.questions .container .items-descrition .item-link a {
+  text-align: right;
+  display: inline-block;
+  padding: 0.6rem 3rem;
+  background-color: #ffa500;
+  border-radius: 5px;
+  color: white;
+  transition: 0.5s;
+}
+.questions .container .items-descrition .item-link a::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f101";
+  position: relative;
+  top: 0.1rem;
+  margin-left: 0.5rem;
+}
+.questions .container .items-descrition .item-link a:hover {
+  background-color: white;
+  color: black;
+  box-shadow: 13px 7px 15px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 13px 7px 15px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 13px 7px 15px 0px rgba(0, 0, 0, 0.75);
+}
+
+/* Footer*/
+footer {
+  padding: 2rem 0;
+  background-color: black;
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+footer .container .footer-items:first-child,
+footer .container .footer-items:nth-child(2) {
+  flex: 0 0 20%;
+}
+footer .container .footer-items:last-of-type {
+  flex: 0 0 50%;
+}
+footer .container .footer-items:last-of-type p {
+  color: white;
+  margin-bottom: 1rem;
+}
+footer .container .footer-items h5 {
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  color: white;
+  opacity: 0.7;
+}
+footer .container .footer-items ul {
+  list-style: none;
+}
+footer .container .footer-items ul li {
+  margin-bottom: 1rem;
+}
+footer .container .footer-items ul li a {
+  color: white;
+  opacity: 0.7;
+}
+footer .container .social {
+  overflow: hidden;
+  display: inline-block;
+}
+footer .container .social i {
+  transition: 0.5s;
+  color: white;
+  opacity: 0.7;
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+footer .container .social .footer-items:last-of-type p {
+  margin-bottom: 1rem;
+}/*# sourceMappingURL=style.css.map */
