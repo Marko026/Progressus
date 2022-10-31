@@ -1,23 +1,22 @@
 @mixin responsive($point) {
-  @if $point == large {
-    @media screen and (min-width: 1366px) {
-      @content;
-    }
-  }
-
   @if $point == desktop {
-    @media screen and (min-width: 1024px) {
+    @media screen and (max-width: 1334px) {
       @content;
     }
   }
 
   @if $point == tablet {
-    @media screen and (min-width: 600px) {
+    @media screen and (max-width: 768px) {
       @content;
     }
   }
   @if $point == mobile {
-    @media screen and (min-width: 400px) {
+    @media screen and (max-width: 576px) {
+      @content;
+    }
+  }
+  @if $point == small {
+    @media screen and (max-width: 530px) {
       @content;
     }
   }

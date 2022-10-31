@@ -12,14 +12,15 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 0;
-    img {
-      max-width: 80%;
-    }
-    @include responsive(mobile) {
+    @include responsive(tablet) {
       flex-direction: column;
     }
-    @include responsive(tablet) {
-      flex-direction: row;
+    img {
+      max-width: 80%;
+      @include responsive(tablet) {
+        flex: 0 0 100%;
+        margin-bottom: 1rem;
+      }
     }
 
     nav {
@@ -27,26 +28,15 @@ header {
         display: flex;
         gap: 2rem;
         align-items: center;
-        @include responsive(mobile) {
-          margin-top: 1rem;
-        }
-        @include responsive(tablet) {
-          gap: 1rem;
-        }
-        @include responsive(desktop) {
-          gap: 2rem;
-        }
+
         li {
           list-style: none;
           a {
-            @include responsive(mobile) {
-              font-size: 1.2rem;
-            }
-            @include responsive(desktop) {
-              font-size: 1.6rem;
-            }
             color: $white;
             transition: $transition;
+            @include responsive(mobile) {
+              font-size: 1.1rem;
+            }
             &:hover {
               color: $primary;
             }
@@ -58,7 +48,7 @@ header {
           text-transform: uppercase;
           transition: $transition;
           @include responsive(mobile) {
-            padding: 0.5rem;
+            padding: 0.3rem;
           }
           &:hover {
             border-color: $primary;
@@ -75,110 +65,94 @@ header {
   background-position: center;
   background-size: cover;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  h1 {
-    color: $white;
-    font-weight: 300;
-    text-transform: uppercase;
-    @include responsive(mobile) {
-      font-size: 2.3rem;
-    }
-    @include responsive(tablet) {
-      font-size: 3.5rem;
-    }
-    @include responsive(desktop) {
-      font-size: 4rem;
-    }
+  @include responsive(tablet) {
+    height: 40vh;
+  }
+  @include responsive(mobile) {
+    height: 60vh;
   }
   .hero {
     display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    max-width: 55rem;
-    justify-content: space-between;
-    @include responsive(mobile) {
-      justify-content: space-around;
-    }
-    @include responsive(desktop) {
-      justify-content: space-between;
-    }
-
-    .hero-items:first-child {
-      flex: 0 0 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h1 {
       color: $white;
-      padding: 2rem 0;
-      @include responsive(mobile) {
-        font-size: 1.3rem;
-      }
+      font-weight: 400;
+      text-transform: uppercase;
+
       @include responsive(tablet) {
-        font-size: 1.6rem;
+        font-size: 3rem;
       }
-      &:hover {
-        background-color: transparent;
+      @include responsive(small) {
+        font-size: 2rem;
       }
     }
-    .hero-items:nth-child(2),
-    .hero-items:nth-child(3) {
-      flex: 0 0 49.5%;
-      border: 2px solid $white;
-      border-radius: 3px;
-      transition: $transition;
-      @include responsive(mobile) {
-        flex: 0 0 45%;
-      }
-      @include responsive(desktop) {
-        flex: 0 0 49.5%;
-      }
-      a {
-        @include responsive(mobile) {
-          font-size: 1rem;
-        }
-        @include responsive(desktop) {
-          font-size: 1.6rem;
-        }
-        display: block;
-        text-transform: uppercase;
+    .hero-description {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      p {
+        text-align: center;
+        flex: 0 0 100%;
+        padding: 2rem 0;
         color: $white;
-        opacity: 0.7;
-        font-weight: 500;
-        padding: 1rem;
+        @include responsive(mobile) {
+          font-size: 1.4rem;
+        }
       }
-      &:hover {
-        background-color: $primary;
-        border-color: transparent transparent;
+      .hero-links {
+        flex: 0 0 39%;
+        padding: 1rem;
+        text-align: center;
+        border: 1px solid $white;
+        transition: $transition;
+        a {
+          color: $white;
+          text-transform: uppercase;
+          @include responsive(mobile) {
+            font-size: 1rem;
+          }
+        }
+        &:hover {
+          background-color: $primary;
+          border-color: transparent;
+        }
       }
     }
   }
 }
+
 /***********
  about section
  ***********/
 .about-section {
+  height: 30vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  @include responsive(mobile) {
-    height: 40vh;
+  @include responsive(tablet) {
+    height: 20vh;
   }
-  @include responsive(desktop) {
-    height: 50vh;
-  }
+
   .about {
+    flex: 0 0 60%;
     text-align: center;
     @include responsive(mobile) {
-      flex-basis: 90%;
+      flex: 0 0 80%;
     }
-    @include responsive(desktop) {
-      flex-basis: 60%;
+    @include responsive(small) {
+      flex: 0 0 90%;
     }
     h2 {
-      @include responsive(mobile) {
-        font-size: 2.5rem;
-      }
       margin-bottom: 1rem;
       font-weight: 500;
+      @include responsive(small) {
+        font-size: 2.5rem;
+      }
     }
   }
 }
@@ -200,22 +174,22 @@ header {
     display: flex;
     text-align: center;
     justify-content: space-between;
-    @include responsive(mobile) {
+    @include responsive(tablet) {
       flex-wrap: wrap;
     }
     .items {
-      @include responsive(mobile) {
-        flex-basis: 100%;
-      }
       @include responsive(tablet) {
-        flex-basis: 49%;
+        flex: 0 0 45%;
       }
-      @include responsive(desktop) {
-        flex-basis: 24%;
+      @include responsive(mobile) {
+        flex: 0 0 100%;
       }
       i {
         font-size: 4rem;
         margin: 4rem 0;
+      }
+      p {
+        font-size: 1.3rem;
       }
     }
   }
@@ -234,15 +208,16 @@ header {
     justify-content: space-between;
 
     .items {
-      margin-bottom: 2rem;
-      @include responsive(mobile) {
+      @include responsive(desktop) {
+        flex: 0 0 47%;
+        text-align: left;
+      }
+      @include responsive(tablet) {
         flex: 0 0 100%;
         text-align: center;
       }
-      @include responsive(tablet) {
-        flex: 0 0 48%;
-        text-align: left;
-      }
+      margin-bottom: 2rem;
+
       h4 {
         font-weight: 500;
         margin-bottom: 1rem;
@@ -297,33 +272,21 @@ footer {
   .container {
     display: flex;
     justify-content: space-between;
-    @include responsive(mobile) {
+    @include responsive(tablet) {
       flex-wrap: wrap;
     }
 
     .footer-items:first-child,
     .footer-items:nth-child(2) {
       flex: 0 0 20%;
-      @include responsive(mobile) {
-        flex: 0 0 50%;
-        margin-bottom: 1rem;
-      }
       @include responsive(tablet) {
         flex: 0 0 50%;
-        margin-bottom: 1rem;
-      }
-      @include responsive(desktop) {
-        flex: 0 0 20%;
-        margin-bottom: 1rem;
       }
     }
     .footer-items:last-of-type {
       flex: 0 0 50%;
-      @include responsive(mobile) {
+      @include responsive(tablet) {
         flex: 0 0 100%;
-      }
-      @include responsive(desktop) {
-        flex: 0 0 50%;
       }
       p {
         color: $white;

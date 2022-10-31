@@ -25,7 +25,7 @@ body {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 4.5rem;
 }
 
 h2 {
@@ -62,38 +62,24 @@ header .container {
   align-items: center;
   padding: 1.5rem 0;
 }
-header .container img {
-  max-width: 80%;
-}
-@media screen and (min-width: 400px) {
+@media screen and (max-width: 768px) {
   header .container {
     flex-direction: column;
   }
 }
-@media screen and (min-width: 600px) {
-  header .container {
-    flex-direction: row;
+header .container img {
+  max-width: 80%;
+}
+@media screen and (max-width: 768px) {
+  header .container img {
+    flex: 0 0 100%;
+    margin-bottom: 1rem;
   }
 }
 header .container nav ul {
   display: flex;
   gap: 2rem;
   align-items: center;
-}
-@media screen and (min-width: 400px) {
-  header .container nav ul {
-    margin-top: 1rem;
-  }
-}
-@media screen and (min-width: 600px) {
-  header .container nav ul {
-    gap: 1rem;
-  }
-}
-@media screen and (min-width: 1024px) {
-  header .container nav ul {
-    gap: 2rem;
-  }
 }
 header .container nav ul li {
   list-style: none;
@@ -102,14 +88,9 @@ header .container nav ul li a {
   color: white;
   transition: 0.5s;
 }
-@media screen and (min-width: 400px) {
+@media screen and (max-width: 576px) {
   header .container nav ul li a {
-    font-size: 1.2rem;
-  }
-}
-@media screen and (min-width: 1024px) {
-  header .container nav ul li a {
-    font-size: 1.6rem;
+    font-size: 1.1rem;
   }
 }
 header .container nav ul li a:hover {
@@ -121,9 +102,9 @@ header .container nav ul li:last-of-type {
   text-transform: uppercase;
   transition: 0.5s;
 }
-@media screen and (min-width: 400px) {
+@media screen and (max-width: 576px) {
   header .container nav ul li:last-of-type {
-    padding: 0.5rem;
+    padding: 0.3rem;
   }
 }
 header .container nav ul li:last-of-type:hover {
@@ -137,147 +118,111 @@ header .container nav ul li:last-of-type:hover {
   background-position: center;
   background-size: cover;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.hero-section h1 {
-  color: white;
-  font-weight: 300;
-  text-transform: uppercase;
-}
-@media screen and (min-width: 400px) {
-  .hero-section h1 {
-    font-size: 2.3rem;
+@media screen and (max-width: 768px) {
+  .hero-section {
+    height: 40vh;
   }
 }
-@media screen and (min-width: 600px) {
-  .hero-section h1 {
-    font-size: 3.5rem;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .hero-section h1 {
-    font-size: 4rem;
+@media screen and (max-width: 576px) {
+  .hero-section {
+    height: 60vh;
   }
 }
 .hero-section .hero {
   display: flex;
-  flex-wrap: wrap;
-  text-align: center;
-  max-width: 55rem;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-@media screen and (min-width: 400px) {
-  .hero-section .hero {
-    justify-content: space-around;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .hero-section .hero {
-    justify-content: space-between;
-  }
-}
-.hero-section .hero .hero-items:first-child {
-  flex: 0 0 100%;
+.hero-section .hero h1 {
   color: white;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 768px) {
+  .hero-section .hero h1 {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 530px) {
+  .hero-section .hero h1 {
+    font-size: 2rem;
+  }
+}
+.hero-section .hero .hero-description {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.hero-section .hero .hero-description p {
+  text-align: center;
+  flex: 0 0 100%;
   padding: 2rem 0;
+  color: white;
 }
-@media screen and (min-width: 400px) {
-  .hero-section .hero .hero-items:first-child {
-    font-size: 1.3rem;
+@media screen and (max-width: 576px) {
+  .hero-section .hero .hero-description p {
+    font-size: 1.4rem;
   }
 }
-@media screen and (min-width: 600px) {
-  .hero-section .hero .hero-items:first-child {
-    font-size: 1.6rem;
-  }
-}
-.hero-section .hero .hero-items:first-child:hover {
-  background-color: transparent;
-}
-.hero-section .hero .hero-items:nth-child(2),
-.hero-section .hero .hero-items:nth-child(3) {
-  flex: 0 0 49.5%;
-  border: 2px solid white;
-  border-radius: 3px;
+.hero-section .hero .hero-description .hero-links {
+  flex: 0 0 39%;
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid white;
   transition: 0.5s;
 }
-@media screen and (min-width: 400px) {
-  .hero-section .hero .hero-items:nth-child(2),
-.hero-section .hero .hero-items:nth-child(3) {
-    flex: 0 0 45%;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .hero-section .hero .hero-items:nth-child(2),
-.hero-section .hero .hero-items:nth-child(3) {
-    flex: 0 0 49.5%;
-  }
-}
-.hero-section .hero .hero-items:nth-child(2) a,
-.hero-section .hero .hero-items:nth-child(3) a {
-  display: block;
-  text-transform: uppercase;
+.hero-section .hero .hero-description .hero-links a {
   color: white;
-  opacity: 0.7;
-  font-weight: 500;
-  padding: 1rem;
+  text-transform: uppercase;
 }
-@media screen and (min-width: 400px) {
-  .hero-section .hero .hero-items:nth-child(2) a,
-.hero-section .hero .hero-items:nth-child(3) a {
+@media screen and (max-width: 576px) {
+  .hero-section .hero .hero-description .hero-links a {
     font-size: 1rem;
   }
 }
-@media screen and (min-width: 1024px) {
-  .hero-section .hero .hero-items:nth-child(2) a,
-.hero-section .hero .hero-items:nth-child(3) a {
-    font-size: 1.6rem;
-  }
-}
-.hero-section .hero .hero-items:nth-child(2):hover,
-.hero-section .hero .hero-items:nth-child(3):hover {
+.hero-section .hero .hero-description .hero-links:hover {
   background-color: #ffa500;
-  border-color: transparent transparent;
+  border-color: transparent;
 }
 
 /***********
  about section
  ***********/
 .about-section {
+  height: 30vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-@media screen and (min-width: 400px) {
+@media screen and (max-width: 768px) {
   .about-section {
-    height: 40vh;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .about-section {
-    height: 50vh;
+    height: 20vh;
   }
 }
 .about-section .about {
+  flex: 0 0 60%;
   text-align: center;
 }
-@media screen and (min-width: 400px) {
+@media screen and (max-width: 576px) {
   .about-section .about {
-    flex-basis: 90%;
+    flex: 0 0 80%;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 530px) {
   .about-section .about {
-    flex-basis: 60%;
+    flex: 0 0 90%;
   }
 }
 .about-section .about h2 {
   margin-bottom: 1rem;
   font-weight: 500;
 }
-@media screen and (min-width: 400px) {
+@media screen and (max-width: 530px) {
   .about-section .about h2 {
     font-size: 2.5rem;
   }
@@ -302,29 +247,27 @@ header .container nav ul li:last-of-type:hover {
   text-align: center;
   justify-content: space-between;
 }
-@media screen and (min-width: 400px) {
+@media screen and (max-width: 768px) {
   .reason-section .container {
     flex-wrap: wrap;
   }
 }
-@media screen and (min-width: 400px) {
+@media screen and (max-width: 768px) {
   .reason-section .container .items {
-    flex-basis: 100%;
+    flex: 0 0 45%;
   }
 }
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 576px) {
   .reason-section .container .items {
-    flex-basis: 49%;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .reason-section .container .items {
-    flex-basis: 24%;
+    flex: 0 0 100%;
   }
 }
 .reason-section .container .items i {
   font-size: 4rem;
   margin: 4rem 0;
+}
+.reason-section .container .items p {
+  font-size: 1.3rem;
 }
 
 /* questions*/
@@ -344,16 +287,16 @@ header .container nav ul li:last-of-type:hover {
 .questions .container .items {
   margin-bottom: 2rem;
 }
-@media screen and (min-width: 400px) {
+@media screen and (max-width: 1334px) {
+  .questions .container .items {
+    flex: 0 0 47%;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 768px) {
   .questions .container .items {
     flex: 0 0 100%;
     text-align: center;
-  }
-}
-@media screen and (min-width: 600px) {
-  .questions .container .items {
-    flex: 0 0 48%;
-    text-align: left;
   }
 }
 .questions .container .items h4 {
@@ -410,7 +353,7 @@ footer .container {
   display: flex;
   justify-content: space-between;
 }
-@media screen and (min-width: 400px) {
+@media screen and (max-width: 768px) {
   footer .container {
     flex-wrap: wrap;
   }
@@ -419,38 +362,18 @@ footer .container .footer-items:first-child,
 footer .container .footer-items:nth-child(2) {
   flex: 0 0 20%;
 }
-@media screen and (min-width: 400px) {
+@media screen and (max-width: 768px) {
   footer .container .footer-items:first-child,
 footer .container .footer-items:nth-child(2) {
     flex: 0 0 50%;
-    margin-bottom: 1rem;
-  }
-}
-@media screen and (min-width: 600px) {
-  footer .container .footer-items:first-child,
-footer .container .footer-items:nth-child(2) {
-    flex: 0 0 50%;
-    margin-bottom: 1rem;
-  }
-}
-@media screen and (min-width: 1024px) {
-  footer .container .footer-items:first-child,
-footer .container .footer-items:nth-child(2) {
-    flex: 0 0 20%;
-    margin-bottom: 1rem;
   }
 }
 footer .container .footer-items:last-of-type {
   flex: 0 0 50%;
 }
-@media screen and (min-width: 400px) {
+@media screen and (max-width: 768px) {
   footer .container .footer-items:last-of-type {
     flex: 0 0 100%;
-  }
-}
-@media screen and (min-width: 1024px) {
-  footer .container .footer-items:last-of-type {
-    flex: 0 0 50%;
   }
 }
 footer .container .footer-items:last-of-type p {
